@@ -15,7 +15,7 @@ const LandingPage = () => {
             <img src={LearnSVG} width="400px" alt="orang baca buku"/>
         </div>
       </div>
-      <h1 className="flex justify-center font-bold mt-[-40px] mb-14">Silahkan Pilih salah satu</h1>
+      <h1 className="flex justify-center font-bold mt-[-40px] mb-14">Silahkan pilih menu berikut</h1>
       <div className="pb-10">        
       <LandingCards />
       </div>
