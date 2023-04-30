@@ -8,9 +8,11 @@ const Login = () => {
         "theme",
         Dark ? "halloween" : "autumn"
       );
+      
     return (
-        <div className="flex justify-center py-10">
-            <div className="card w-96 bg-base-100 shadow-xl">
+
+        <div className="flex justify-center pt-10 mt-16">
+            <div className="card w-96 bg-base-100 drop-shadow-2xl">
                 <figure className="px-10 pt-10">
                 {Theme === 'halloween' ?  <img
                         src={WhiteLogo}
@@ -34,7 +36,7 @@ const Login = () => {
                             <div className="py-2">
                             <input type="password" placeholder="Password" className="input input-bordered input-error w-full max-w-xs" />
                             </div>
-                            <p className="pb-4">belum memiliki akun? silahkan chat <Link className="text-[blue] underline" to={'https://api.whatsapp.com/send/?phone=085156407032&text&type=phone_number&app_absent=0'} target="_blank">Kesini</Link></p>
+                            <p className="pb-4">belum memiliki akun? silahkan chat <Link className="text-[blue] underline" to={'https://api.whatsapp.com/send/?phone=6285156407032&text&type=phone_number&app_absent=0'} target="_blank">Kesini</Link></p>
                         <button className="btn btn-primary">Login</button>
                         </form>
                     </div>
