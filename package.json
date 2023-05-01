@@ -11,6 +11,10 @@
   },
   "dependencies": {
     "@iconscout/react-unicons": "^2.0.2",
+    "@tiptap/extension-image": "^2.0.3",
+    "@tiptap/pm": "^2.0.3",
+    "@tiptap/react": "^2.0.3",
+    "@tiptap/starter-kit": "^2.0.3",
     "axios": "^1.4.0",
     "daisyui": "^2.51.6",
     "prop-types": "^15.8.1",

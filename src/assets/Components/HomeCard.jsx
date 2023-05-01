@@ -4,10 +4,10 @@ import Teacher from "../Images/teacher.svg";
 
 const Card = () => {
   return (
-    <div className="flex justify-center">
+    <div className="lg:flex block justify-center">
 
       {/* asatidzah card */}
-      <div className="card w-96 scale-up-card bg-base-100 drop-shadow-2xl mx-6">
+      <div className="card w-96 lg:mb-0 mb-7 scale-up-card bg-base-100 drop-shadow-2xl mx-6">
         <figure>
           <img width="200px" src={Teacher} alt="Ustadz" className="py-2" />
         </figure>
