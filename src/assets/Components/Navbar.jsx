@@ -46,9 +46,9 @@ const Navbar = () => {
         <Link to={"/"} className="btn btn-ghost normal-case text-xl">
           {" "}
           {Theme === "autumn" ? (
-            <img src={Logo} width="100px" alt="logo" className="mr-2" />
+            <img src='https://github.com/Iqbalnglames/rqits-vite/blob/develop/src/assets/Images/PPRQ-logo.png?raw=true' width="100px" alt="logo" className="mr-2" />
           ) : (
-            <img src={LogoWhite} width="100px" className="mr-2" alt="logo" />
+            <img src='https://github.com/Iqbalnglames/rqits-vite/blob/develop/src/assets/Images/PPRQ-logo-white.png?raw=true' width="100px" className="mr-2" alt="logo" />
           )}
           RQITS
         </Link>
