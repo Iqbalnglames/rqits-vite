@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Logo from "../images/PPRQ-logo.png";
-import LogoWhite from "../images/PPRQ-logo-white.png";
 import useLocalStorage from "use-local-storage";
 
 const Navbar = () => {
