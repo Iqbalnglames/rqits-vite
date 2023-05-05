@@ -49,7 +49,7 @@ const Login = () => {
                   Kesini
                 </Link>
               </p>
-              <button className="btn btn-primary">Login</button>
+              <Link to={'/user'} className="btn btn-primary">Login</button>
             </form>
           </div>
         </div>
