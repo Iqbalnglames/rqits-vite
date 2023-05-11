@@ -1,10 +1,46 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import useLocalStorage from "use-local-storage";
 import WhiteLogo from "../Images/PPRQ-logo-white.png";
 import BlackLogo from "../Images/PPRQ-logo.png";
+import { useEffect, useState } from "react";
+import axios from "axios";
 const Login = () => {
+  const [ username, setUsername ] = useState()
+  const [ password, setPassword ] = useState()
+  const [ validation, setValidation ] = useState()
   const Dark = window.matchMedia("(prefers-color-scheme: halloween)").matches;
   const [Theme] = useLocalStorage("theme", Dark ? "halloween" : "autumn");
+  const navigate = useNavigate()
+  const token = localStorage.getItem('token')
+
+  useEffect(()=>{
+    if(token) {
+      navigate('/user')
+    }
+
+  })
+  const handleLogin = async(e) => {
+    e.preventDefault()
+
+
+    const formData = new FormData()
+    formData.append('username', username)
+    formData.append('password', password)
+
+
+   
+      await axios.post('http://192.168.0.156:8000/api/login', formData)
+      .then((response)=>{
+        localStorage.setItem('token', response.data.token)
+        navigate('/user')
+      
+      })
+    
+    .catch((error) => {
+      setValidation(error.response.data)
+    })
+  }
+ 
 
   return (
     <div className="flex justify-center pt-10 mt-16">
@@ -17,17 +53,19 @@ const Login = () => {
           )}
         </figure>
         <div className="card-body items-center text-center">
+         
           <h2 className="card-title font-bold">
             Login untuk mengakses akun anda (khusus Asatidzah)
           </h2>
           <p>Privasi Anda Akan Kami Jaga InsyaAllah</p>
           <div className="block">
-            <form>
+            <form onSubmit={handleLogin} method="post">
               <div className="py-2">
                 <input
                   type="text"
                   placeholder="Username"
                   className="input input-bordered input-error w-full max-w-xs"
+                  onChange={(e)=> setUsername(e.target.value)}
                 />
               </div>
               <div className="py-2">
@@ -35,6 +73,7 @@ const Login = () => {
                   type="password"
                   placeholder="Password"
                   className="input input-bordered input-error w-full max-w-xs"
+                  onChange={(e)=> setPassword(e.target.value)}
                 />
               </div>
               <p className="pb-4">
@@ -49,7 +88,7 @@ const Login = () => {
                   Kesini
                 </Link>
               </p>
-              <Link to={'/user'} className="btn btn-primary">Login</Link>
+              <button type="submit" className="btn btn-primary">Login</button>
             </form>
           </div>
         </div>
