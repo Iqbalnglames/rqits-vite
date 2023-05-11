@@ -29,7 +29,7 @@ const Login = () => {
 
 
    
-      await axios.post('http://192.168.0.156:8000/api/login', formData)
+      await axios.post(' https://rqits.test/api/login', formData)
       .then((response)=>{
         localStorage.setItem('token', response.data.token)
         navigate('/user')

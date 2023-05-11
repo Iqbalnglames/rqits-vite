@@ -3,7 +3,7 @@ import LandingPage from "./Pages/Landing";
 import Login from "./Pages/Login";
 import Tiptap from "./Components/Editor";
 import User from "./Pages/User";
-import Absen from "./Pages/Absen";
+import Absen from "./Pages/AbsenQr";
 
 const Navigation = () => {
     return (
