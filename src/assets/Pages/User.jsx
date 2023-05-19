@@ -9,20 +9,20 @@ const User = () => {
   // const [ photo, setPhoto ] = useState('')
   const navigate = useNavigate('')
 
-  const fetchUserData = async () => {
-    axios.defaults.headers.common['Authorization'] =`Bearer ${token}`
-    await axios.get('https://rqits.test/api/user')
-    .then((response)=>{
-      setNama(response.data.nama)
-    })
-  }
+  // const fetchUserData = async () => {
+  //   axios.defaults.headers.common['Authorization'] =`Bearer ${token}`
+  //   await axios.get('https://rqits.test/api/user')
+  //   .then((response)=>{
+  //     setNama(response.data.nama)
+  //   })
+  // }
 
-  useEffect(() => {
-    if(!token) {
-      navigate('/')
-    }
-    fetchUserData()
-  }, [])
+  // useEffect(() => {
+  //   if(!token) {
+  //     navigate('/')
+  //   }
+  //   fetchUserData()
+  // }, [])
 
   const logoutHandler = async() => {
 

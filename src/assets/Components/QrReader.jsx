@@ -68,7 +68,8 @@ const Scanner = () => {
             width: "100%",
             height: "100%",
           }}></video>
-        <h1 className="bg-green-300 text-green-800 py-2 mt-4" >{pesan}</h1>
+          {pesan === 'Absen berhasil ditambahkan' ? <h1 className="bg-green-300 text-green-800 py-2 mt-4" >{pesan}</h1> : null}
+        
       </div>
     </div>
   );
